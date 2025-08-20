@@ -1,0 +1,1058 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RUVI - India's Fastest Growing Cross-Border eCommerce Seller</title>
+    <link href="https://fonts.googleapis.com/css2?family=Glacial+Indifference:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Glacial Indifference', Arial, sans-serif;
+            line-height: 1.6;
+            color: #000;
+            background: #d9d9d9;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: #d9d9d9;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid #000;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 1.5rem 0;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 3rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #000;
+            font-weight: 400;
+            font-size: 0.95rem;
+            transition: opacity 0.3s;
+        }
+
+        .nav-links a:hover {
+            opacity: 0.7;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding-top: 100px;
+            position: relative;
+            background: #d9d9d9;
+        }
+
+        .hero-banner {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('https://drive.google.com/uc?export=view&id=1gvxYMO8wUxtBHZkjmK399iQIpNONR7Xf');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            opacity: 0.3;
+            z-index: 1;
+        }
+
+        .hero-content {
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+            position: relative;
+            z-index: 2;
+            background: rgba(217, 217, 217, 0.9);
+            padding: 4rem 2rem;
+            border-radius: 8px;
+        }
+
+        .hero h1 {
+            font-size: 4.5rem;
+            font-weight: 700;
+            line-height: 1.1;
+            margin-bottom: 1rem;
+            color: #000;
+            letter-spacing: -0.03em;
+        }
+
+        .hero .tagline {
+            font-size: 1.1rem;
+            color: #000;
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+
+        .hero .subtitle {
+            font-size: 1.3rem;
+            color: #000;
+            margin-bottom: 3rem;
+            font-weight: 400;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            opacity: 0.8;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 15px 30px;
+            background: #000;
+            color: #d9d9d9;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: 500;
+            font-size: 1rem;
+            transition: all 0.3s;
+            margin: 0 10px;
+        }
+
+        .cta-button:hover {
+            opacity: 0.8;
+        }
+
+        .cta-secondary {
+            background: transparent;
+            color: #000;
+            border: 2px solid #000;
+        }
+
+        .cta-secondary:hover {
+            background: #000;
+            color: #d9d9d9;
+        }
+
+        /* Content Sections */
+        .section {
+            padding: 6rem 0;
+            background: #d9d9d9;
+        }
+
+        .section-alt {
+            background: #000;
+            color: #d9d9d9;
+        }
+
+        .section h2 {
+            font-size: 2.5rem;
+            font-weight: 600;
+            margin-bottom: 3rem;
+            color: inherit;
+            text-align: center;
+            letter-spacing: -0.02em;
+        }
+
+        .section p {
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+            font-weight: 400;
+            opacity: 0.9;
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 3rem;
+            margin: 4rem 0;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 700;
+            color: inherit;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            font-size: 1rem;
+            font-weight: 400;
+            opacity: 0.8;
+        }
+
+        /* 5PL Services Section */
+        .fpl-hero {
+            background: #000;
+            color: #d9d9d9;
+            text-align: center;
+            padding: 6rem 0;
+        }
+
+        .fpl-hero h2 {
+            font-size: 3rem;
+            margin-bottom: 2rem;
+            font-weight: 600;
+        }
+
+        .fpl-hero .subtitle {
+            font-size: 1.4rem;
+            margin-bottom: 3rem;
+            opacity: 0.9;
+        }
+
+        .pricing-highlight {
+            display: inline-block;
+            background: #d9d9d9;
+            color: #000;
+            padding: 2rem 3rem;
+            border-radius: 8px;
+            font-size: 2rem;
+            font-weight: 700;
+            margin: 2rem 0;
+        }
+
+        .warehouse-info {
+            background: #d9d9d9;
+            color: #000;
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .warehouse-address {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .contact-info {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .fpl-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+
+        .fpl-card {
+            background: #d9d9d9;
+            color: #000;
+            padding: 2rem;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .fpl-card h3 {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .fpl-card p {
+            font-size: 0.95rem;
+            opacity: 0.8;
+        }
+
+        .pricing-table {
+            background: #d9d9d9;
+            color: #000;
+            padding: 4rem 0;
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 3rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .pricing-card {
+            background: #000;
+            color: #d9d9d9;
+            padding: 2rem;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .pricing-card h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .price {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin: 1rem 0;
+        }
+
+        .pricing-card ul {
+            text-align: left;
+            list-style: none;
+            margin: 1rem 0;
+        }
+
+        .pricing-card li {
+            padding: 0.5rem 0;
+            position: relative;
+            padding-left: 20px;
+        }
+
+        .pricing-card li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #d9d9d9;
+        }
+
+        /* Two Column Layout */
+        .two-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: start;
+        }
+
+        .categories-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+        }
+
+        .category-item {
+            padding: 1.5rem;
+            background: #000;
+            color: #d9d9d9;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .category-item h4 {
+            font-size: 1rem;
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+        }
+
+        .category-item p {
+            font-size: 0.85rem;
+            opacity: 0.8;
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            background: #d9d9d9;
+            color: #000;
+        }
+
+        .faq-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid #000;
+            margin-bottom: 1rem;
+        }
+
+        .faq-question {
+            background: none;
+            border: none;
+            width: 100%;
+            padding: 1.5rem 0;
+            text-align: left;
+            font-size: 1.2rem;
+            font-weight: 500;
+            color: #000;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-family: 'Glacial Indifference', Arial, sans-serif;
+        }
+
+        .faq-question:hover {
+            opacity: 0.7;
+        }
+
+        .faq-answer {
+            padding: 0 0 1.5rem 0;
+            display: none;
+            font-size: 1rem;
+            line-height: 1.6;
+            opacity: 0.8;
+        }
+
+        .faq-answer.active {
+            display: block;
+        }
+
+        .faq-toggle {
+            font-size: 1.5rem;
+            font-weight: 300;
+            transition: transform 0.3s;
+        }
+
+        .faq-item.active .faq-toggle {
+            transform: rotate(45deg);
+        }
+
+        /* Services Grid */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+
+        .service-card {
+            background: #000;
+            color: #d9d9d9;
+            padding: 2rem;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .service-card h3 {
+            font-size: 1.3rem;
+            font-weight: 500;
+            margin-bottom: 1rem;
+        }
+
+        .service-card p {
+            font-size: 0.95rem;
+            opacity: 0.8;
+        }
+
+        /* Contact Section */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+
+        .contact-card {
+            background: #000;
+            color: #d9d9d9;
+            padding: 2rem;
+            border-radius: 8px;
+        }
+
+        .contact-card h3 {
+            font-size: 1.3rem;
+            font-weight: 500;
+            margin-bottom: 1rem;
+        }
+
+        .contact-card p {
+            font-size: 0.95rem;
+            margin-bottom: 0.5rem;
+            opacity: 0.8;
+        }
+
+        /* Founder Section */
+        .founder-content {
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .founder-title {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            font-weight: 400;
+            opacity: 0.8;
+        }
+
+        .founder-bio {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            font-weight: 400;
+            opacity: 0.9;
+        }
+
+        .linkedin-btn {
+            display: inline-block;
+            padding: 12px 24px;
+            border: 2px solid #d9d9d9;
+            color: #d9d9d9;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: all 0.3s;
+            margin: 0 10px;
+        }
+
+        .linkedin-btn:hover {
+            background: #d9d9d9;
+            color: #000;
+        }
+
+        .cta-consultation {
+            background: #d9d9d9;
+            color: #000;
+            border: 2px solid #d9d9d9;
+        }
+
+        .cta-consultation:hover {
+            background: transparent;
+            color: #d9d9d9;
+        }
+
+        /* Footer */
+        footer {
+            background: #000;
+            color: #d9d9d9;
+            padding: 2rem 0;
+            text-align: center;
+            border-top: 1px solid #d9d9d9;
+        }
+
+        .footer-content {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .stats,
+            .services-grid,
+            .fpl-grid,
+            .contact-grid,
+            .categories-grid,
+            .pricing-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .two-column {
+                grid-template-columns: 1fr;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+
+            .hero-content {
+                padding: 2rem 1rem;
+            }
+
+            .pricing-highlight {
+                font-size: 1.5rem;
+                padding: 1.5rem 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#5pl">5PL Services</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero" id="home">
+        <div class="hero-banner"></div>
+        <div class="container">
+            <div class="hero-content">
+                <div class="tagline">India's Fastest Growing Cross-Border eCommerce Seller</div>
+                <h1>RUVI</h1>
+                <p class="subtitle">Now, Pioneering 5PL cross-border e-commerce solutions from India to USA; over 15 years experience in American market domination.</p>
+                <a href="https://buy.stripe.com/cN28x4bVh9VH2ZOeUZ" target="_blank" class="cta-button">Book $5 Consultation</a>
+                <a href="#5pl" class="cta-button cta-secondary">Explore 5PL Services</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="fpl-hero">
+        <div class="container">
+            <h2>🚛 5PL Warehousing Partner</h2>
+            <p class="subtitle">Built by sellers, for sellers - Let us scale your US e-commerce operations</p>
+            <div class="pricing-highlight">
+                $1 In & $1 Out - Per SKU
+            </div>
+            <p>✅ No Storage Fees ✅ No Hidden Costs ✅ Dallas Strategic Location</p>
+        </div>
+    </section>
+
+    <section class="warehouse-info">
+        <div class="container">
+            <div class="warehouse-address">📍 Southwell Rd, Dallas, TX 75229</div>
+            <div class="contact-info">C/o Vikaas Jaain, DBA: RUVI CROSS BORDER</div>
+            <div class="contact-info">📞 +1 (832) 961-4529</div>
+            <br>
+            <p><strong>💡 Why Dallas?</strong> Centrally located to cut 6-12% on shipping costs and improve turnaround time significantly</p>
+        </div>
+    </section>
+
+    <section class="pricing-table">
+        <div class="container">
+            <h2 style="text-align: center; margin-bottom: 3rem;">Simple, Transparent Pricing</h2>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <h3>Inbound Processing</h3>
+                    <div class="price">$1</div>
+                    <p>Per SKU Received</p>
+                    <ul>
+                        <li>Inventory receiving</li>
+                        <li>Quality inspection</li>
+                        <li>System integration</li>
+                        <li>Storage setup</li>
+                    </ul>
+                </div>
+                <div class="pricing-card">
+                    <h3>Outbound Fulfillment</h3>
+                    <div class="price">$1</div>
+                    <p>Per SKU Shipped</p>
+                    <ul>
+                        <li>Pick & pack service</li>
+                        <li>Shipping label creation</li>
+                        <li>Order tracking</li>
+                        <li>Returns processing (RMA)</li>
+                    </ul>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 3rem;">
+                <p><strong>📦 Shipping Labels & Packing = Actual Cost</strong></p>
+                <p>What we pay is what you pay. No markup on logistics.</p>
+                <br>
+                <p><strong>❌ No Storage Fees</strong> - We encourage 1-2 week inventory turnover</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="stats">
+                <div class="stat-item">
+                    <span class="stat-number">15+</span>
+                    <span class="stat-label">Years Leading the Market</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">5PL</span>
+                    <span class="stat-label">Complete Solution Provider</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">8</span>
+                    <span class="stat-label">Product Categories Mastered</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">Dallas</span>
+                    <span class="stat-label">Strategic USA Hub</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section section-alt" id="about">
+        <div class="container">
+            <h2>The Pioneer of Indian Cross-Border Commerce</h2>
+            <div style="max-width: 800px; margin: 0 auto; text-align: center;">
+                <p>RUVI established itself as India's fastest growing cross-border e-commerce seller long before the industry became mainstream. While others were still figuring out domestic markets, we were already conquering American consumers with authentic Indian products.</p>
+                <p>Our revolutionary approach to micro-niche brand building has transformed how Indian products reach global audiences. We don't just sell products; we create experiences that American customers crave and competitors struggle to replicate.</p>
+                <p>From our strategic operations spanning India to Dallas, we've built an empire that spans across multiple product categories, each carefully curated to capture maximum market share in the USA.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section section-alt" id="5pl">
+        <div class="container">
+            <h2>Revolutionary 5PL Services</h2>
+            <div style="max-width: 800px; margin: 0 auto; text-align: center; margin-bottom: 3rem;">
+                <p>Beyond traditional logistics, we offer comprehensive 5th Party Logistics (5PL) solutions that revolutionize how businesses scale in the USA market. We don't just move products—we orchestrate entire market entry strategies.</p>
+                <p>Our Dallas facility is self-owned (not a partner warehouse), ensuring 100% accountability and control over your inventory.</p>
+            </div>
+            <div class="fpl-grid">
+                <div class="fpl-card">
+                    <h3>🔧 Tech + Operations</h3>
+                    <p>Base.com WMS integration with dedicated WhatsApp groups for real-time coordination. Perfect for last-minute changes!</p>
+                </div>
+                <div class="fpl-card">
+                    <h3>📦 Complete Fulfillment</h3>
+                    <p>Ideal for packages under 2LB. Heavy shipments handled case-by-case with specialized infrastructure.</p>
+                </div>
+                <div class="fpl-card">
+                    <h3>🌍 Multi-Language Support</h3>
+                    <p>24x7 support in English, Hindi, Gujarati, and Spanish. Your team is always understood.</p>
+                </div>
+                <div class="fpl-card">
+                    <h3>📊 Real-Time Tracking</h3>
+                    <p>Live shipping rates via PirateShip/Shippo with USPS Ground Advantage including $100 insurance.</p>
+                </div>
+                <div class="fpl-card">
+                    <h3>🚚 India to Dallas Freight</h3>
+                    <p>Freight consolidation from Delhi to Dallas at ~$5 per KG. Full container loads with prior notice.</p>
+                </div>
+                <div class="fpl-card">
+                    <h3>🔐 Specialized Handling</h3>
+                    <p>Rugs, carpets, jewelry up to $2500, heavy packages 5-30KG, and fire-insured facility protection.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="products">
+        <div class="container">
+            <h2>Unmatched Product Portfolio</h2>
+            <div class="two-column">
+                <div>
+                    <p>Our diversified portfolio spans eight meticulously chosen categories, each representing years of market research, consumer behavior analysis, and strategic positioning. We've mastered the art of identifying gaps in the American market and filling them with premium Indian craftsmanship.</p>
+                    <p>Every category we enter becomes a testament to our expertise. We don't just participate in markets—we dominate them through superior product curation, unmatched quality control, and innovative marketing strategies.</p>
+                    <p>Our core customers are Indian sellers scaling in the USA via Etsy, Amazon, Walmart, and Shopify—and we help them do it faster, cheaper, and with complete peace of mind.</p>
+                </div>
+                <div class="categories-grid">
+                    <div class="category-item">
+                        <h4>Premium Handicrafts</h4>
+                        <p>Authentic Indian artistry for American homes</p>
+                    </div>
+                    <div class="category-item">
+                        <h4>Luxury Leather Goods</h4>
+                        <p>Handcrafted excellence meets modern design</p>
+                    </div>
+                    <div class="category-item">
+                        <h4>Custom Print-on-Demand</h4>
+                        <p>Personalized products with Indian flair</p>
+                    </div>
+                    <div class="category-item">
+                        <h4>Fashion Apparel</h4>
+                        <p>Contemporary Indian fashion for global wardrobes</p>
+                    </div>
+                    <div class="category-item">
+                        <h4>Wellness Products</h4>
+                        <p>Ancient Indian wisdom for modern wellness</p>
+                    </div>
+                    <div class="category-item">
+                        <h4>Herbal Remedies</h4>
+                        <p>Time-tested natural solutions</p>
+                    </div>
+                    <div class="category-item">
+                        <h4>Home Décor</h4>
+                        <p>Transform spaces with Indian elegance</p>
+                    </div>
+                    <div class="category-item">
+                        <h4>Rugs & Carpets</h4>
+                        <p>Specialized handling and custom packaging</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section section-alt">
+        <div class="container">
+            <h2>Strategic Market Channels</h2>
+            <div style="max-width: 800px; margin: 0 auto; text-align: center; margin-bottom: 3rem;">
+                <p>Our multi-channel approach isn't just comprehensive—it's revolutionary. We support businesses of all sizes, from those just getting started to sellers shipping hundreds of orders daily.</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>Major Marketplaces</h3>
+                    <p>Dominating Etsy, Amazon, Walmart, and Shopify with optimized operations and Dallas-based fulfillment advantage.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Fast Setup & Integration</h3>
+                    <p>Go live within 2-3 business days after onboarding. Quick system integration with your existing platforms.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Inventory Management</h3>
+                    <p>Optimized for 1-2 week turnover. Advanced liquidation support to recover 5% of landed costs for unsold inventory.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section faq-section" id="faq">
+        <div class="container">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <button class="faq-question">
+                        What makes RUVI's 5PL services different from traditional 3PL?
+                        <span class="faq-toggle">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        5PL goes beyond just storage and shipping. We handle end-to-end supply chain management including shipping label procurement, return handling, real-time coordination via WhatsApp, tech integrations, and strategic consulting. Think of us as your logistics command center in the U.S.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        What are your handling charges and are there any hidden fees?
+                        <span class="faq-toggle">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        Simple pricing: $1 In & $1 Out per SKU. No storage fees, no hidden charges. Returns (RMA) processed at the same $1/SKU rate. Packing and shipping labels at actual cost with no markup on logistics.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        Where is your warehouse located and why Dallas?
+                        <span class="faq-toggle">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        📍 Southwell Rd, Dallas, TX 75229. This is our self-owned facility (not a partner warehouse) ensuring full control and accountability. Dallas is centrally located, helping cut 6-12% on shipping costs and significantly improving turnaround times.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        Do you have minimum order volumes or investment requirements?
+                        <span class="faq-toggle">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        No minimums! We work with sellers of all sizes—from those just getting started to those shipping hundreds of orders daily. A $200 deposit is required to set up your account and integrate systems. All operations are prepaid.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        How does shipping label pricing work?
+                        <span class="faq-toggle">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        We provide shipping labels at cost with no markup. Real-time pricing available through our internal rate sheet and PirateShip calculator. We recommend PirateShip/Shippo with USPS Ground Advantage (includes $100 insurance).
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        Can you integrate with my store or order management system?
+                        <span class="faq-toggle">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        Yes! We use Base.com for WMS integration - your orders flow automatically. We also maintain dedicated WhatsApp groups for real-time daily coordination. Setup takes 2-3 business days after onboarding.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        What happens with returns and RMA processing?
+                        <span class="faq-toggle">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        We process returns at the same rate - $1 per SKU. You can choose to restock, dispose, or inspect returns based on your SOPs. Easy, clean reverse logistics handled seamlessly.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        What if my inventory doesn't move within 15 days?
+                        <span class="faq-toggle">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        Our model is built for fast turnover. If goods don't move within 15 days and no extension is requested, we may forfeit or destroy goods without prior notice, with a penalty of $5 per day. To extend: Request 2 days prior to deadline.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        Can you help with shipping from India to your Dallas warehouse?
+                        <span class="faq-toggle">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        ✅ Yes. We support freight consolidation from Delhi to Dallas using our account. Costs approximately $5 per KG (ex-Delhi to ex-Dallas). Saves you from shipping coordination hassles and reduces your logistics burden.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        Do you handle heavy packages, rugs, or specialized items?
+                        <span class="faq-toggle">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        ✅ Absolutely. We handle packages 5-30KG, rug rolls, folded rugs, custom labeling and packaging. We also manage jewelry up to $2500 per piece, and offer custom SOPs at $10 per task (under 15 minutes).
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        Is your warehouse insured and can I use the address for my business?
+                        <span class="faq-toggle">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        ✅ Yes, our facility is protected under fire & general liability insurance. Once onboarded, you can use the Dallas address as your U.S. return location and sender address for outbound orders.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        Do you provide reporting and help with inventory liquidation?
+                        <span class="faq-toggle">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        ✅ Yes. Daily updates via WhatsApp groups, Google Sheets inventory tracking, WMS dashboard, and formal email reports. For unsold inventory, we connect you to resellers or buy stock directly. Typically recover 5% of landed cost.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        How fast can I go live after signing up?
+                        <span class="faq-toggle">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        🚀 Within 2-3 business days after payment + SOP setup + inventory arrival. We move fast and have streamlined onboarding processes to get you operational quickly.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section section-alt">
+        <div class="container">
+            <div class="founder-content">
+                <h2>Vikaas Jain</h2>
+                <p class="founder-title">Founder & Visionary Leader</p>
+                <p class="founder-bio">The mastermind behind RUVI's unprecedented success, Vikaas has revolutionized how Indian products reach American consumers. His strategic vision and relentless execution have established RUVI as India's fastest growing cross-border e-commerce operation. With over 15 years of pioneering experience, he continues to lead industry transformation and set new benchmarks for international trade excellence.</p>
+                <a href="https://www.linkedin.com/in/vikaasjaain" target="_blank" class="linkedin-btn">Connect on LinkedIn</a>
+                <a href="mailto:dm@ruvicrossborder.com" class="linkedin-btn">Email Direct</a>
+                <a href="mailto:ruvicrossborder@gmail.com" class="linkedin-btn">Gmail Contact</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="contact">
+        <div class="container">
+            <h2>Ready to Scale Your US E-Commerce?</h2>
+            <div style="max-width: 800px; margin: 0 auto; text-align: center; margin-bottom: 3rem;">
+                <p>Ready to leverage 15+ years of cross-border e-commerce expertise? Whether you're looking to expand into the USA market, need comprehensive 5PL solutions, or want to understand what true market leadership looks like, RUVI is your strategic partner for guaranteed success.</p>
+                <p>Our track record speaks for itself. Our results are undeniable. Our expertise is unmatched. Contact us to discover how we can transform your cross-border ambitions into market-dominating realities.</p>
+                <div style="margin: 3rem 0;">
+                    <a href="https://buy.stripe.com/cN28x4bVh9VH2ZOeUZ" target="_blank" class="cta-button cta-consultation">Book Serious $5 Consultation Call</a>
+                </div>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <h3>India Headquarters</h3>
+                    <p><strong>RUVI CROSS BORDER PRIVATE LIMITED</strong></p>
+                    <p>CIN: U36109RJ2022PTC084180</p>
+                    <p>2nd Floor, House No. 30, Chirag Complex</p>
+                    <p>Behind Ghumar Garden, Near Mahivram Apartment</p>
+                    <p>Panriyo Ki Madri, Udaipur – 313002</p>
+                    <p>Rajasthan, India</p>
+                    <p><strong>GST:</strong> 08AAMCR2292Q1ZI</p>
+                    <br>
+                    <p><strong>India Contact:</strong> +91 7665953666</p>
+                    <p><strong>Email:</strong> dm@ruvicrossborder.com</p>
+                    <p><strong>Gmail:</strong> ruvicrossborder@gmail.com</p>
+                </div>
+                <div class="contact-card">
+                    <h3>Dallas 5PL Warehouse</h3>
+                    <p><strong>Self-Owned Facility</strong></p>
+                    <p>Southwell Rd, Dallas, TX 75229</p>
+                    <p>C/o Vikaas Jaain, DBA: RUVI CROSS BORDER</p>
+                    <p>United States of America</p>
+                    <br>
+                    <p><strong>USA Warehouse:</strong> +1 (832) 961-4529</p>
+                    <p><strong>Direct Line:</strong> Vikaas Jain</p>
+                    <p><strong>LinkedIn:</strong> vikaasjaain</p>
+                    <p><strong>Email:</strong> dm@ruvicrossborder.com</p>
+                    <br>
+                    <p><strong>Support Languages:</strong></p>
+                    <p>English, Hindi, Gujarati, Spanish</p>
+                    <p><strong>Support Hours:</strong> 24x7</p>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 4rem; padding: 3rem; background: #000; color: #d9d9d9; border-radius: 8px;">
+                <h3 style="margin-bottom: 2rem;">🔗 Quick Links & Resources</h3>
+                <p style="margin-bottom: 1rem;"><strong>📊 Live Shipping Rates:</strong></p>
+                <p style="margin-bottom: 0.5rem;"><a href="https://docs.google.com/spreadsheets/d/1_6kPS6TWQ5-HFUChWdxpAUVJl8lJUxAZPyzWIdGsPqg/edit" target="_blank" style="color: #d9d9d9;">Internal Label Rate Sheet</a></p>
+                <p style="margin-bottom: 2rem;"><a href="https://www.pirateship.com/usps/shipping-calculator" target="_blank" style="color: #d9d9d9;">PirateShip USPS Calculator</a></p>
+                
+                <p style="margin-bottom: 1rem;"><strong>📦 Packaging Supplies:</strong></p>
+                <p style="margin-bottom: 2rem;"><a href="https://www.uline.com" target="_blank" style="color: #d9d9d9;">Uline.com - Our packaging partner</a></p>
+                
+                <p><strong>💬 Ready to discuss your needs seriously?</strong></p>
+                <p>Book a $5 consultation call to explore how we can accelerate your US market success.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2025 RUVI Cross Border Private Limited. All rights reserved.</p>
+                <p>India's Fastest Growing Cross-Border eCommerce Seller | Your 5PL Partner for US Market Success</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // FAQ Toggle functionality
+        document.querySelectorAll('.faq-question').forEach(button => {
+            button.addEventListener('click', () => {
+                const faqItem = button.parentElement;
+                const faqAnswer = faqItem.querySelector('.faq-answer');
+                const isActive = faqItem.classList.contains('active');
+                
+                // Close all other FAQ items
+                document.querySelectorAll('.faq-item').forEach(item => {
+                    item.classList.remove('active');
+                    item.querySelector('.faq-answer').classList.remove('active');
+                });
+                
+                // Toggle current item
+                if (!isActive) {
+                    faqItem.classList.add('active');
+                    faqAnswer.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
+
+                
