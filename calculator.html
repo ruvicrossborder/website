@@ -15,104 +15,103 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             min-height: 100vh;
-            padding: 20px;
+            padding: 10px;
         }
 
-        .container {
-            max-width: 1200px;
+        .main-container {
+            max-width: 1400px;
             margin: 0 auto;
-            background: rgba(255, 255, 255, 0.95);
-            border-radius: 20px;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
             overflow: hidden;
-            backdrop-filter: blur(10px);
         }
 
+        /* Header Section */
         .header {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
-            padding: 30px;
+            padding: 25px;
             text-align: center;
         }
 
         .header h1 {
-            font-size: 2.5rem;
-            margin-bottom: 10px;
-            font-weight: 300;
+            font-size: 2.2rem;
+            margin-bottom: 8px;
+            font-weight: 400;
         }
 
         .header p {
-            font-size: 1.1rem;
+            font-size: 1rem;
             opacity: 0.9;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
         }
 
         .header-links {
             display: flex;
             justify-content: center;
-            gap: 20px;
+            gap: 15px;
             flex-wrap: wrap;
-            margin-top: 20px;
+            margin-bottom: 10px;
         }
 
         .header-link {
             background: rgba(255, 255, 255, 0.2);
             color: white;
             text-decoration: none;
-            padding: 8px 16px;
-            border-radius: 20px;
-            font-size: 0.9rem;
+            padding: 6px 12px;
+            border-radius: 15px;
+            font-size: 0.85rem;
             transition: all 0.3s ease;
             backdrop-filter: blur(10px);
         }
 
         .header-link:hover {
             background: rgba(255, 255, 255, 0.3);
-            transform: translateY(-2px);
         }
 
         .coming-soon {
             background: rgba(16, 185, 129, 0.2);
             color: white;
-            padding: 10px 20px;
-            border-radius: 25px;
-            font-size: 0.85rem;
-            margin-top: 15px;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.8rem;
             display: inline-block;
             backdrop-filter: blur(10px);
             border: 1px solid rgba(255, 255, 255, 0.2);
+            margin-top: 10px;
         }
 
-        .calculator-content {
+        /* Calculator Grid */
+        .calculator-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 40px;
-            padding: 40px;
+            gap: 0;
+            min-height: 600px;
         }
 
+        /* Input Section */
         .input-section {
-            background: white;
             padding: 30px;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            background: #f8f9fa;
+            border-right: 2px solid #e9ecef;
         }
 
         .results-section {
-            background: white;
             padding: 30px;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            background: white;
         }
 
         .section-title {
             font-size: 1.4rem;
             margin-bottom: 25px;
             color: #333;
-            font-weight: 500;
-            border-bottom: 2px solid #667eea;
+            font-weight: 600;
+            border-bottom: 3px solid #667eea;
             padding-bottom: 10px;
         }
 
+        /* Form Styling */
         .form-group {
             margin-bottom: 20px;
         }
@@ -132,17 +131,17 @@
             color: white;
             padding: 2px 6px;
             border-radius: 50%;
-            font-size: 12px;
+            font-size: 11px;
             cursor: help;
             font-weight: normal;
         }
 
         input[type="number"], select {
             width: 100%;
-            padding: 12px 16px;
-            border: 2px solid #e1e5e9;
+            padding: 12px 15px;
+            border: 2px solid #ddd;
             border-radius: 8px;
-            font-size: 16px;
+            font-size: 15px;
             transition: all 0.3s ease;
             background: white;
         }
@@ -155,7 +154,7 @@
 
         .radio-group {
             display: flex;
-            gap: 20px;
+            gap: 15px;
             margin-top: 8px;
         }
 
@@ -165,12 +164,12 @@
             gap: 8px;
             cursor: pointer;
             padding: 8px 12px;
-            border-radius: 8px;
+            border-radius: 6px;
             transition: background 0.3s ease;
         }
 
         .radio-item:hover {
-            background: #f8f9ff;
+            background: #e9ecef;
         }
 
         .radio-item input[type="radio"] {
@@ -178,23 +177,23 @@
             margin: 0;
         }
 
+        /* Results Styling */
         .result-item {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 15px 0;
+            padding: 12px 0;
             border-bottom: 1px solid #f0f0f0;
         }
 
         .result-item:last-child {
             border-bottom: none;
-            font-weight: 600;
-            font-size: 1.1rem;
+            margin: 15px -30px -30px;
+            padding: 20px 30px;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
-            margin: 20px -20px -20px;
-            padding: 20px;
-            border-radius: 0 0 15px 15px;
+            font-weight: 600;
+            font-size: 1.1rem;
         }
 
         .result-label {
@@ -205,7 +204,7 @@
         .result-value {
             font-weight: 600;
             color: #333;
-            font-size: 1.1rem;
+            font-size: 1rem;
         }
 
         .result-item:last-child .result-label,
@@ -213,101 +212,84 @@
             color: white;
         }
 
-        .currency {
-            color: #667eea;
-            font-weight: 600;
+        /* Footer Disclaimer */
+        .footer-disclaimer {
+            background: #2c3e50;
+            color: #bdc3c7;
+            padding: 20px;
+            text-align: center;
+            font-size: 0.75rem;
+            line-height: 1.4;
         }
 
-        .comparison-badge {
-            display: inline-block;
-            padding: 4px 8px;
-            border-radius: 12px;
-            font-size: 12px;
-            font-weight: 600;
-            margin-left: 8px;
+        .footer-disclaimer h4 {
+            color: #e74c3c;
+            margin-bottom: 10px;
+            font-size: 0.85rem;
         }
 
-        .cheaper {
-            background: #10b981;
-            color: white;
+        .footer-disclaimer p {
+            margin-bottom: 8px;
         }
 
-        .expensive {
-            background: #ef4444;
-            color: white;
+        .footer-disclaimer strong {
+            color: #ecf0f1;
         }
 
-        .disclaimer {
-            background: #f8f9fa;
-            border: 2px solid #e9ecef;
-            border-radius: 15px;
-            padding: 25px;
-            margin: 30px 40px;
-            font-size: 0.9rem;
-            line-height: 1.6;
-            color: #495057;
-        }
-
-        .disclaimer h3 {
-            color: #dc3545;
-            margin-bottom: 15px;
-            font-size: 1.1rem;
-            font-weight: 600;
-        }
-
-        .disclaimer p {
-            margin-bottom: 12px;
-        }
-
-        .disclaimer strong {
-            color: #dc3545;
-        }
-            .calculator-content {
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .calculator-grid {
                 grid-template-columns: 1fr;
-                gap: 20px;
-                padding: 20px;
+                min-height: auto;
+            }
+
+            .input-section {
+                border-right: none;
+                border-bottom: 2px solid #e9ecef;
             }
 
             .header h1 {
-                font-size: 2rem;
+                font-size: 1.8rem;
+            }
+
+            .header-links {
+                flex-direction: column;
+                align-items: center;
+                gap: 10px;
+            }
+
+            .input-section, .results-section {
+                padding: 25px;
+            }
+
+            .footer-disclaimer {
+                font-size: 0.7rem;
+                padding: 15px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            body {
+                padding: 5px;
             }
 
             .input-section, .results-section {
                 padding: 20px;
             }
-        }
 
-        .highlight-savings {
-            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
-            color: white;
-            padding: 15px;
-            border-radius: 10px;
-            margin-top: 20px;
-            text-align: center;
-        }
+            .header {
+                padding: 20px;
+            }
 
-        .service-comparison {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 15px;
-            margin-top: 20px;
-        }
-
-        .service-card {
-            padding: 15px;
-            border-radius: 10px;
-            border: 2px solid #e1e5e9;
-            text-align: center;
-        }
-
-        .service-card.selected {
-            border-color: #667eea;
-            background: #f8f9ff;
+            .header h1 {
+                font-size: 1.6rem;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="container">
+    <div class="main-container">
+        <!-- Header Section -->
         <div class="header">
             <h1>RUVI<>Xindus Shipping Calculator</h1>
             <p>Calculate cross-border export shipping costs from India to USA</p>
@@ -326,7 +308,9 @@
             </div>
         </div>
 
-        <div class="calculator-content">
+        <!-- Calculator Grid -->
+        <div class="calculator-grid">
+            <!-- Input Section (Left) -->
             <div class="input-section">
                 <h2 class="section-title">Shipment Details</h2>
                 
@@ -383,6 +367,7 @@
                 </div>
             </div>
 
+            <!-- Results Section (Right) -->
             <div class="results-section">
                 <h2 class="section-title">Cost Breakdown</h2>
                 
@@ -401,9 +386,14 @@
                     <span class="result-value" id="duty-fee">₹0</span>
                 </div>
 
-                <div class="result-item" id="bbx-fee-row" style="display: none;">
+                <div class="result-item" id="bbx-clearance-row" style="display: none;">
                     <span class="result-label">BBX Clearance Fee</span>
-                    <span class="result-value" id="bbx-fee">₹0</span>
+                    <span class="result-value" id="bbx-clearance">₹0</span>
+                </div>
+
+                <div class="result-item" id="india-clearance-row" style="display: none;">
+                    <span class="result-label">India Clearance Charges</span>
+                    <span class="result-value" id="india-clearance">₹0</span>
                 </div>
 
                 <div class="result-item">
@@ -443,23 +433,11 @@
             </div>
         </div>
 
-        <div class="disclaimer">
-            <h3>⚠️ IMPORTANT LEGAL DISCLAIMER</h3>
-            <p><strong>ASSUMPTION-BASED CALCULATOR:</strong> This shipping cost calculator is provided as an estimation tool only and is based on publicly available rate information and industry assumptions. All calculations, rates, fees, and charges displayed are approximations and should not be considered as binding quotes or guarantees.</p>
-            
-            <p><strong>NO LIABILITY:</strong> RUVI CROSS BORDER PRIVATE LIMITED explicitly disclaims all responsibility and liability for any errors, omissions, inaccuracies, or discrepancies in the calculations provided by this tool. We do not warrant the accuracy, completeness, reliability, or suitability of any information contained herein.</p>
-            
-            <p><strong>INDEPENDENT OPERATION:</strong> RUVI CROSS BORDER PRIVATE LIMITED operates independently and has no partnership, affiliation, endorsement, or business relationship with Xindus or any other shipping service provider mentioned in this calculator. We are a proud Indian cross-border e-commerce facilitator with over 15 years of experience in the industry.</p>
-            
-            <p><strong>GOOD FAITH SERVICE:</strong> This calculator has been developed in good faith to assist Indian cross-border e-commerce sellers in making informed shipping decisions. However, actual shipping costs may vary significantly due to factors including but not limited to: fluctuating exchange rates, changes in shipping company policies, seasonal surcharges, fuel adjustments, customs regulations, dimensional weight calculations, and other variables beyond our control.</p>
-            
-            <p><strong>USER RESPONSIBILITY:</strong> Users are strongly advised to obtain official quotes directly from shipping service providers before making any business decisions. RUVI CROSS BORDER PRIVATE LIMITED shall not be held liable for any direct, indirect, incidental, consequential, or punitive damages arising from the use of this calculator or reliance on its outputs.</p>
-            
-            <p><strong>PROFESSIONAL CONSULTATION:</strong> For accurate pricing and shipping solutions, we recommend consulting with certified shipping professionals and obtaining formal quotations from authorized service providers. This tool is supplementary to, not a replacement for, professional shipping consultation.</p>
-            
-            <p><strong>TERMS OF USE:</strong> By using this calculator, you acknowledge that you have read, understood, and agree to be bound by this disclaimer. You use this tool entirely at your own risk and discretion.</p>
-            
-            <p><em>Last Updated: 26 August 2025 - 11: 40 PM IST | RUVI CROSS BORDER PRIVATE LIMITED - Proudly Indian Cross-Border E-commerce Seller, Since 2012</em></p>
+        <!-- Footer Disclaimer -->
+        <div class="footer-disclaimer">
+            <h4>⚠️ IMPORTANT LEGAL DISCLAIMER</h4>
+            <p><strong>ASSUMPTION-BASED CALCULATOR:</strong> This tool provides estimates only. RUVI CROSS BORDER PRIVATE LIMITED disclaims all liability for errors/omissions. <strong>No partnership with Xindus/xyz.</strong> Proudly Indian Cross-Border E-commerce Seller, Since 2012 <strong>Get official quotes before decisions.</strong></p>
+            <p><em>Terms: By using this calculator, you accept full responsibility and risk. Last Updated: 26 August 2025 - 11: 45 PM IST.</em></p>
         </div>
     </div>
 
@@ -531,6 +509,7 @@
         const GST_RATE = 0.18;
         const MPF_PER_PARCEL = 220; // ₹ (approx $2.62)
         const BBX_CLEARANCE = 1000; // ₹
+        const INDIA_CLEARANCE = 1000; // ₹ for BBX
         const USD_TO_INR = 84; // Approximate conversion rate
         const IMPORT_DUTY_RATE = 0.05; // 5%
         const TARIFF_RATE = 0.5; // 50% of FOB value
@@ -573,7 +552,7 @@
             const shippingRatePerParcel = getShippingRate(service, weightKg);
 
             // Calculate fees
-            let shippingCost, iorFee, dutyFee, bbxFee = 0, mpfFee;
+            let shippingCost, iorFee, dutyFee, bbxFee = 0, indiaClearance = 0, mpfFee;
 
             if (model === 'individual') {
                 shippingCost = shippingRatePerParcel * parcels;
@@ -585,11 +564,12 @@
                 iorFee = Math.max(RATES.ior * totalFobINR, RATES.iorMin);
                 dutyFee = Math.max(RATES.duty * totalFobINR, RATES.dutyMin);
                 bbxFee = BBX_CLEARANCE;
+                indiaClearance = INDIA_CLEARANCE;
                 mpfFee = MPF_PER_PARCEL; // Once per bulk lot
             }
 
-            // GST calculation (on shipping + IOR + duty + BBX, excluding MPF, Import Duty, Tariff)
-            const gstBase = shippingCost + iorFee + dutyFee + bbxFee;
+            // GST calculation (on shipping + IOR + duty + BBX + India clearance, excluding MPF, Import Duty, Tariff)
+            const gstBase = shippingCost + iorFee + dutyFee + bbxFee + indiaClearance;
             const gst = gstBase * GST_RATE;
 
             const indianTotal = gstBase + gst;
@@ -628,13 +608,17 @@
             document.getElementById('grand-total').textContent = `₹${Math.round(grandTotal).toLocaleString()}`;
             document.getElementById('per-parcel').textContent = `₹${Math.round(perParcel).toLocaleString()}`;
 
-            // Show/hide BBX fee
-            const bbxFeeRow = document.getElementById('bbx-fee-row');
+            // Show/hide BBX fees
+            const bbxClearanceRow = document.getElementById('bbx-clearance-row');
+            const indiaClearanceRow = document.getElementById('india-clearance-row');
             if (model === 'bulk') {
-                bbxFeeRow.style.display = 'flex';
-                document.getElementById('bbx-fee').textContent = `₹${bbxFee.toLocaleString()}`;
+                bbxClearanceRow.style.display = 'flex';
+                indiaClearanceRow.style.display = 'flex';
+                document.getElementById('bbx-clearance').textContent = `₹${bbxFee.toLocaleString()}`;
+                document.getElementById('india-clearance').textContent = `₹${indiaClearance.toLocaleString()}`;
             } else {
-                bbxFeeRow.style.display = 'none';
+                bbxClearanceRow.style.display = 'none';
+                indiaClearanceRow.style.display = 'none';
             }
         }
 
