@@ -44,6 +44,43 @@
         .header p {
             font-size: 1.1rem;
             opacity: 0.9;
+            margin-bottom: 20px;
+        }
+
+        .header-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .header-link {
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            text-decoration: none;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+
+        .header-link:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-2px);
+        }
+
+        .coming-soon {
+            background: rgba(16, 185, 129, 0.2);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-size: 0.85rem;
+            margin-top: 15px;
+            display: inline-block;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
         }
 
         .calculator-content {
@@ -200,7 +237,31 @@
             color: white;
         }
 
-        @media (max-width: 768px) {
+        .disclaimer {
+            background: #f8f9fa;
+            border: 2px solid #e9ecef;
+            border-radius: 15px;
+            padding: 25px;
+            margin: 30px 40px;
+            font-size: 0.9rem;
+            line-height: 1.6;
+            color: #495057;
+        }
+
+        .disclaimer h3 {
+            color: #dc3545;
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+
+        .disclaimer p {
+            margin-bottom: 12px;
+        }
+
+        .disclaimer strong {
+            color: #dc3545;
+        }
             .calculator-content {
                 grid-template-columns: 1fr;
                 gap: 20px;
@@ -250,6 +311,19 @@
         <div class="header">
             <h1>RUVI<>Xindus Shipping Calculator</h1>
             <p>Calculate cross-border export shipping costs from India to USA</p>
+            
+            <div class="header-links">
+                <a href="https://winter-anteater-f3f.notion.site/Looking-to-Scale-Your-E-Commerce-in-the-U-S-22cc25650e758007a589e8f5a5161afd" target="_blank" class="header-link">
+                    🏭 5PL US Warehousing Facility - Scale Your E-Commerce
+                </a>
+                <a href="https://lnkd.in/dvWfvMiq" target="_blank" class="header-link">
+                    📍 Join WhatsApp Community
+                </a>
+            </div>
+            
+            <div class="coming-soon">
+                🚀 Coming Soon: DHL, FedEx, ShipGlobal & Shiprocket Rate Cards (2-3 days)
+            </div>
         </div>
 
         <div class="calculator-content">
@@ -367,6 +441,25 @@
                     <span class="result-value" id="per-parcel">₹0</span>
                 </div>
             </div>
+        </div>
+
+        <div class="disclaimer">
+            <h3>⚠️ IMPORTANT LEGAL DISCLAIMER</h3>
+            <p><strong>ASSUMPTION-BASED CALCULATOR:</strong> This shipping cost calculator is provided as an estimation tool only and is based on publicly available rate information and industry assumptions. All calculations, rates, fees, and charges displayed are approximations and should not be considered as binding quotes or guarantees.</p>
+            
+            <p><strong>NO LIABILITY:</strong> RUVI CROSS BORDER PRIVATE LIMITED explicitly disclaims all responsibility and liability for any errors, omissions, inaccuracies, or discrepancies in the calculations provided by this tool. We do not warrant the accuracy, completeness, reliability, or suitability of any information contained herein.</p>
+            
+            <p><strong>INDEPENDENT OPERATION:</strong> RUVI CROSS BORDER PRIVATE LIMITED operates independently and has no partnership, affiliation, endorsement, or business relationship with Xindus or any other shipping service provider mentioned in this calculator. We are a proud Indian cross-border e-commerce facilitator with over 15 years of experience in the industry.</p>
+            
+            <p><strong>GOOD FAITH SERVICE:</strong> This calculator has been developed in good faith to assist Indian cross-border e-commerce sellers in making informed shipping decisions. However, actual shipping costs may vary significantly due to factors including but not limited to: fluctuating exchange rates, changes in shipping company policies, seasonal surcharges, fuel adjustments, customs regulations, dimensional weight calculations, and other variables beyond our control.</p>
+            
+            <p><strong>USER RESPONSIBILITY:</strong> Users are strongly advised to obtain official quotes directly from shipping service providers before making any business decisions. RUVI CROSS BORDER PRIVATE LIMITED shall not be held liable for any direct, indirect, incidental, consequential, or punitive damages arising from the use of this calculator or reliance on its outputs.</p>
+            
+            <p><strong>PROFESSIONAL CONSULTATION:</strong> For accurate pricing and shipping solutions, we recommend consulting with certified shipping professionals and obtaining formal quotations from authorized service providers. This tool is supplementary to, not a replacement for, professional shipping consultation.</p>
+            
+            <p><strong>TERMS OF USE:</strong> By using this calculator, you acknowledge that you have read, understood, and agree to be bound by this disclaimer. You use this tool entirely at your own risk and discretion.</p>
+            
+            <p><em>Last Updated: 26 August 2025 - 11: 40 PM IST | RUVI CROSS BORDER PRIVATE LIMITED - Proudly Indian Cross-Border E-commerce Seller, Since 2012</em></p>
         </div>
     </div>
 
