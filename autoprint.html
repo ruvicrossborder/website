@@ -5,20 +5,20 @@
   <title>Auto Print PDF</title>
 </head>
 <body>
-  <iframe id="pdf-frame"
-          src="http://ruvicrossborder.com/xx.pdf"
-          style="display:none;"
-          type="application/pdf"></iframe>
+  <embed id="pdf-embed"
+         src="http://ruvicrossborder.com/xx.pdf"
+         type="application/pdf"
+         width="100%" height="100%">
 
   <script>
     window.onload = function () {
-      const pdfFrame = document.getElementById("pdf-frame");
+      const pdfEmbed = document.getElementById("pdf-embed");
 
-      pdfFrame.onload = function () {
-        // Focus the PDF frame and trigger print
-        pdfFrame.contentWindow.focus();
-        pdfFrame.contentWindow.print();
-      };
+      // Wait a bit for PDF to load fully
+      setTimeout(() => {
+        pdfEmbed.focus();
+        pdfEmbed.contentWindow.print();
+      }, 1500);
     };
   </script>
 </body>
