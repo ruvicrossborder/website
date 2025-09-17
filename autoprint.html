@@ -2,27 +2,27 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>Force Print PDF</title>
+  <title>Auto Print PDF</title>
 </head>
 <body>
   <script>
     async function printPDF() {
       const pdfUrl = "http://ruvicrossborder.com/xx.pdf";
 
-      // Fetch the PDF as a blob
+      // Fetch the PDF file
       const response = await fetch(pdfUrl);
       const blob = await response.blob();
       const blobUrl = URL.createObjectURL(blob);
 
-      // Create hidden iframe
+      // Create hidden iframe with the PDF blob
       const iframe = document.createElement("iframe");
       iframe.style.display = "none";
       iframe.src = blobUrl;
       document.body.appendChild(iframe);
 
-      iframe.onload = () => {
+      iframe.onload = function () {
         iframe.contentWindow.focus();
-        iframe.contentWindow.print(); // kiosk-printing will make this silent
+        iframe.contentWindow.print(); // will be silent with --kiosk-printing
       };
     }
 
