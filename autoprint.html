@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Auto Print PDF</title>
+</head>
+<body>
+  <iframe id="pdf-frame"
+          src="http://ruvicrossborder.com/xx.pdf"
+          style="display:none;"
+          type="application/pdf"></iframe>
+
+  <script>
+    window.onload = function () {
+      const pdfFrame = document.getElementById("pdf-frame");
+
+      pdfFrame.onload = function () {
+        // Focus the PDF frame and trigger print
+        pdfFrame.contentWindow.focus();
+        pdfFrame.contentWindow.print();
+      };
+    };
+  </script>
+</body>
+</html>
