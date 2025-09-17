@@ -2,21 +2,31 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>Auto Print PDF</title>
+  <title>Force Print PDF</title>
 </head>
 <body>
   <script>
-    window.onload = function () {
+    async function printPDF() {
       const pdfUrl = "http://ruvicrossborder.com/xx.pdf";
 
-      // Open PDF directly in same tab
-      window.location.href = pdfUrl;
+      // Fetch the PDF as a blob
+      const response = await fetch(pdfUrl);
+      const blob = await response.blob();
+      const blobUrl = URL.createObjectURL(blob);
 
-      // After a short delay, trigger print
-      setTimeout(() => {
-        window.print();
-      }, 2000); // wait 2 seconds for PDF viewer to load
-    };
+      // Create hidden iframe
+      const iframe = document.createElement("iframe");
+      iframe.style.display = "none";
+      iframe.src = blobUrl;
+      document.body.appendChild(iframe);
+
+      iframe.onload = () => {
+        iframe.contentWindow.focus();
+        iframe.contentWindow.print(); // kiosk-printing will make this silent
+      };
+    }
+
+    window.onload = printPDF;
   </script>
 </body>
 </html>
